@@ -20,8 +20,8 @@ factTable = PatientDataDF.join(person_df, PatientDataDF["name"] == person_df["na
                     .join(state_df, PatientDataDF["state"] == state_df["state"], "inner") \
                     .select(
                         PatientDataDF["id"],
-                        person_df["personid"],
-                        gender_df["genderid"],
+                        person_df["personID"],
+                        gender_df["genderID"],
                         profession_df["professionID"],
                         state_df["stateID"],
                         PatientDataDF["asOfDate"],

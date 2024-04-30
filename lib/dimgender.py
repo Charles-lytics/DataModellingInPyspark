@@ -6,6 +6,6 @@ def create_dimgender():
     dim_gender = spark.sql("""
         create table gender as 
         select 
-            row_number() Over(order by gender) as genderid, gender 
+            row_number() Over(order by gender) as genderID, gender 
         from 
             (select distinct gender from patientDataDF) t""")
